@@ -1,0 +1,11 @@
+// gauge(150, 420, temperature, RED, "Temperature", 0.8);
+void gauge(int x, int y, float value, int Colour, String heading, float zoom){
+  #define FullScale      100
+  #define start_angle    120
+  #define end_angle      420
+  #define Outer_diameter 50
+  #define Inner_diameter 35
+  lcd.drawArc(x, y, Outer_diameter * zoom, Inner_diameter * zoom, start_angle, end_angle, TFT_RED);
+  lcd.fillArc(x, y, Outer_diameter * zoom, Inner_diameter * zoom, start_angle, start_angle + (end_angle - start_angle) * value / FullScale, Colour);
+  display_text(x - (heading.length() * 7) / 2, y - 70 * zoom, heading, Colour, 1); 
+}
