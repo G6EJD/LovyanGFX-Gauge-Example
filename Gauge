@@ -1,4 +1,6 @@
-// gauge(150, 420, temperature, RED, "Temperature", 0.8);
+gauge(150, 420, temperature, RED, "Temperature", 0.8); // Example call
+
+
 void gauge(int x, int y, float value, int Colour, String heading, float zoom){
   #define FullScale      100
   #define start_angle    120
